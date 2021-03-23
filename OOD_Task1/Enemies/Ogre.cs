@@ -11,5 +11,10 @@ namespace Enemies
         {
             Armor = armor;
         }
+
+        public override void Accept(IDefender defender)
+        {
+            defender.Visit(this);
+        }
     }
 }

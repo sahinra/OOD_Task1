@@ -13,5 +13,20 @@ namespace Defenders
             this.name = name;
             hasRat=false;
         }
+
+        public void Visit(Rat rat)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Visit(Ogre ogre)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Visit(Giant giant)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

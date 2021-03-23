@@ -17,9 +17,9 @@ namespace Enemies
             Alive = true;
         }
 
-        protected void GetDamage(int damage)
+        protected void GetDamage(int? damage)
         {
-            HP -= damage;
+            HP -= damage.Value;
             if(HP<=0)
             {
                 Console.WriteLine($"{Name} is dead...");
@@ -27,5 +27,6 @@ namespace Enemies
             }
         }
 
+        public abstract void Accept(IDefender defender);
     }
 }

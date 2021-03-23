@@ -11,5 +11,10 @@ namespace Enemies
         {
             Speed = speed;
         }
+
+        public override void Accept(IDefender defender)
+        {
+            defender.Visit(this);
+        }
     }
 }
