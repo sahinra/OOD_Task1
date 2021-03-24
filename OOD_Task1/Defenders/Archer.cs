@@ -15,18 +15,21 @@ namespace Defenders
         {
             base.Visit(rat);
             arrows--;
+            Console.WriteLine($"{name} has {arrows} arrows");
         }
 
         public new void Visit(Ogre ogre)
         {
             base.Visit(ogre);
             arrows--;
+            Console.WriteLine($"{name} has {arrows} arrows");
         }
 
         public new void Visit(Giant giant)
         {
             base.Visit(giant);
             arrows -= 2;
+            Console.WriteLine($"{name} has {arrows} arrows losing 2 arrows");
         }
     }
 }

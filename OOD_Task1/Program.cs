@@ -47,6 +47,7 @@ namespace lab4
             foreach (var defender in defenders)
             {
                 enemy.Accept(defender);
+                //Console.WriteLine("********************************");
 
                 if (!enemy.Alive)
                     break;

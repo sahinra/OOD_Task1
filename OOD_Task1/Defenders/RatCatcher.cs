@@ -18,8 +18,8 @@ namespace Defenders
         {
             if (!hasRat)
             {
-                Console.WriteLine($"{name} meets a {rat.Name}");
-                rat.Alive = false;
+                Console.WriteLine($"{name} meets {rat.Name} with HP: {rat.HP}");
+                rat.isNotAlive();
                 hasRat = true;
                 Console.WriteLine($"{name} has a rat body");
             }
@@ -29,8 +29,8 @@ namespace Defenders
         {
             if (hasRat)
             {
-                Console.WriteLine($"{name} meets a {ogre.Name}");
-                ogre.Alive = false;
+                Console.WriteLine($"{name} meets {ogre.Name} with HP: {ogre.HP}");
+                ogre.isNotAlive();
             }
         }
 
@@ -38,9 +38,8 @@ namespace Defenders
         {
             if (!hasRat)
             {
-                Console.WriteLine($"{name} meets a {giant.Name}");
-                giant.Alive = false;
-                hasRat = true;
+                Console.WriteLine($"{name} meets {giant.Name} with HP: {giant.HP}");
+                giant.isNotAlive();
             }
         }
     }

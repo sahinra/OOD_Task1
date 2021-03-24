@@ -15,7 +15,7 @@ namespace Enemies
 
         public override void Accept(IDefender defender)
         {
-            Console.WriteLine($"{Name} attacks");
+            Console.WriteLine($"{Name} attacks..");
             defender.Visit(this);
         }
 
@@ -23,7 +23,7 @@ namespace Enemies
         {
             base.GetDamage(damage);
             armor -= damage;
-            Console.WriteLine($"The number of armors of {Name} decreased by {damage}");
+            Console.WriteLine($"The number of armors of {Name} decreased by {damage}..");
         }
     }
 }

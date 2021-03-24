@@ -15,7 +15,7 @@ namespace Enemies
 
         public override void Accept(IDefender defender)
         {
-            Console.WriteLine($"{Name} attacks");
+            Console.WriteLine($"{Name} attacks..");
             defender.Visit(this);
         }
 
@@ -23,7 +23,7 @@ namespace Enemies
         {
             base.GetDamage(damage);
             speed += damage;
-            Console.WriteLine($"The speed of {Name} increased by {damage}");
+            Console.WriteLine($"The speed of {Name} increased by {damage}..");
         }
     }
 }

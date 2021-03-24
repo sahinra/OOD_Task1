@@ -38,17 +38,17 @@ namespace Defenders
 
         public void Visit(Rat rat)
         {
-            Console.WriteLine($"{name} meets a {rat.Name}");
+            Console.WriteLine($"{name} meets {rat.Name} with HP: {rat.HP}");
         }
 
         public void Visit(Ogre ogre)
         {
-            Console.WriteLine($"{name} meets a {ogre.Name}");
+            Console.WriteLine($"{name} meets {ogre.Name} with HP: {ogre.HP}");
         }
 
         public void Visit(Giant giant)
         {
-            Console.WriteLine($"{name} meets a {giant.Name}");
+            Console.WriteLine($"{name} meets {giant.Name} with HP: {giant.HP}");
         }
     }
 }

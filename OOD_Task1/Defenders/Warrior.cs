@@ -16,25 +16,24 @@ namespace Defenders
         }
 
         public void Visit(Rat rat)
-        {
-            Console.WriteLine($"{name} meets a {rat.Name}");
-            rat.Speed -= strength;
+        {        
             if (rng.NextDouble() < rat.Speed / 100) 
             {
-
+                Console.WriteLine($"{name} meets {rat.Name} with HP: {rat.HP}");
+                rat.Damage(strength);
             }
         }
 
         public void Visit(Ogre ogre)
         {
-            Console.WriteLine($"{name} meets a {ogre.Name}");
-            ogre.HP -= strength;
+            Console.WriteLine($"{name} meets {ogre.Name} with HP: {ogre.HP}");
+            ogre.Damage(strength);
         }
 
         public void Visit(Giant giant)
         {
-            Console.WriteLine($"{name} meets a {giant.Name}");
-            giant.HP -= strength;
+            Console.WriteLine($"{name} meets {giant.Name} with HP: {giant.HP}");
+            giant.Damage(strength);
         }
     }
 }

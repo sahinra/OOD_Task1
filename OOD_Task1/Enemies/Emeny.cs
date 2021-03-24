@@ -16,10 +16,23 @@ namespace Enemies
             Alive = true;
         }
 
+        public void Damage(int damage)
+        {
+            GetDamage(damage);
+        }
+
+        public void isNotAlive()
+        {
+            Alive = false;
+            Console.WriteLine($"{Name} is dead...");
+        }
+
         protected void GetDamage(int damage)
         {
-            HP -= damage.Value;
-            if(HP<=0)
+            HP -= damage;
+            Console.WriteLine($"{Name} lost {damage} health power");
+
+            if (HP<=0)
             {
                 Console.WriteLine($"{Name} is dead...");
                 Alive = false;
