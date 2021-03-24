@@ -46,12 +46,11 @@ namespace lab4
         {
             foreach (var defender in defenders)
             {
-                // TODO: try to defend against enemy
+                enemy.Accept(defender);
 
                 if (!enemy.Alive)
                     break;
             }
-
 
             if (enemy.Alive)
                 Console.WriteLine($"{enemy.Name} is alive!");

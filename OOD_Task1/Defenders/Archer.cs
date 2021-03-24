@@ -11,5 +11,22 @@ namespace Defenders
         {
             this.arrows = arrows;
         }
+        public new void Visit(Rat rat)
+        {
+            base.Visit(rat);
+            arrows--;
+        }
+
+        public new void Visit(Ogre ogre)
+        {
+            base.Visit(ogre);
+            arrows--;
+        }
+
+        public new void Visit(Giant giant)
+        {
+            base.Visit(giant);
+            arrows -= 2;
+        }
     }
 }

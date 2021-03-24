@@ -17,17 +17,24 @@ namespace Defenders
 
         public void Visit(Rat rat)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {rat.Name}");
+            rat.Speed -= strength;
+            if (rng.NextDouble() < rat.Speed / 100) 
+            {
+
+            }
         }
 
         public void Visit(Ogre ogre)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {ogre.Name}");
+            ogre.HP -= strength;
         }
 
         public void Visit(Giant giant)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {giant.Name}");
+            giant.HP -= strength;
         }
     }
 }

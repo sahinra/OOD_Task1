@@ -12,6 +12,7 @@ namespace Enemies
 
         public override void Accept(IDefender defender)
         {
+            Console.WriteLine($"{Name} attacks");
             defender.Visit(this);
         }
     }

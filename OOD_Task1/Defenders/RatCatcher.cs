@@ -16,17 +16,32 @@ namespace Defenders
 
         public void Visit(Rat rat)
         {
-            throw new NotImplementedException();
+            if (!hasRat)
+            {
+                Console.WriteLine($"{name} meets a {rat.Name}");
+                rat.Alive = false;
+                hasRat = true;
+                Console.WriteLine($"{name} has a rat body");
+            }
         }
 
         public void Visit(Ogre ogre)
         {
-            throw new NotImplementedException();
+            if (hasRat)
+            {
+                Console.WriteLine($"{name} meets a {ogre.Name}");
+                ogre.Alive = false;
+            }
         }
 
         public void Visit(Giant giant)
         {
-            throw new NotImplementedException();
+            if (!hasRat)
+            {
+                Console.WriteLine($"{name} meets a {giant.Name}");
+                giant.Alive = false;
+                hasRat = true;
+            }
         }
     }
 }

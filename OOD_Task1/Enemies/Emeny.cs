@@ -6,7 +6,6 @@ namespace Enemies
     abstract class Enemy
     {
         public string Name { get; }
-
         public bool Alive { get; private set; }
         public int HP { get; private set; }
 
@@ -17,7 +16,7 @@ namespace Enemies
             Alive = true;
         }
 
-        protected void GetDamage(int? damage)
+        protected void GetDamage(int damage)
         {
             HP -= damage.Value;
             if(HP<=0)

@@ -12,5 +12,32 @@ namespace Defenders
         {
             this.killChance = killChance;
         }
+
+        public new void Visit(Rat rat)
+        {
+            base.Visit(rat);
+            if (rng.NextDouble() < killChance) 
+            {
+                Console.WriteLine($"{name} instantly kills {rat.Name}");
+            }
+        }
+        
+        public new void Visit(Ogre ogre)
+        {
+            base.Visit(ogre);
+            if (rng.NextDouble() < killChance)
+            {
+                Console.WriteLine($"{name} instantly kills {ogre.Name}");
+            }
+        }
+
+        public new void Visit(Giant giant)
+        {
+            base.Visit(giant);
+            if (rng.NextDouble() < killChance)
+            {
+                Console.WriteLine($"{name} instantly kills {giant.Name}");
+            }
+        }
     }
 }

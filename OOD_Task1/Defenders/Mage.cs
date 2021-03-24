@@ -38,17 +38,17 @@ namespace Defenders
 
         public void Visit(Rat rat)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {rat.Name}");
         }
 
         public void Visit(Ogre ogre)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {ogre.Name}");
         }
 
         public void Visit(Giant giant)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} meets a {giant.Name}");
         }
     }
 }
