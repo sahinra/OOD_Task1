@@ -1,2 +1,2 @@
 # OOD_Task1
-Visitor design pattern was used.
+This is one of the tasks that was solved in C# during the Object Oriented Design course and Visitor design pattern was used.
